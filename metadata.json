@@ -1,0 +1,6 @@
+{
+  "name": "Classificados Parnaíba",
+  "description": "Uma plataforma simples e elegante para anunciar, editar e gerenciar classificados de casas em Parnaíba, Piauí.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
