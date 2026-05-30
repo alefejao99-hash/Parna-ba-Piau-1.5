@@ -564,33 +564,71 @@ export default function App() {
           </div>
 
           {/* Buy and sell local groups */}
-          <div className="bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 p-5 rounded-2xl shadow-xs space-y-3">
-            <h3 className="text-xs font-black text-slate-400 uppercase tracking-widest flex items-center gap-1.5">
-              <span>🛒</span> Compra e Vendas
-            </h3>
-            <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
-              🤝 Grupos de Compra e Vendas de Parnaíba PI — participe e fique por dentro das melhores ofertas!
-            </p>
+          <div className="bg-gradient-to-tr from-indigo-950 to-slate-900 border-2 border-indigo-500/40 p-5 rounded-2xl shadow-md text-white space-y-4 relative overflow-hidden">
+            <div className="absolute top-0 right-0 h-16 w-16 bg-indigo-500/10 rounded-full blur-xl pointer-events-none" />
+            <div className="absolute -bottom-6 -left-6 h-16 w-16 bg-emerald-500/10 rounded-full blur-xl pointer-events-none" />
 
-            <div className="grid grid-cols-1 gap-2 pt-1">
+            <div className="space-y-1 relative z-10 animate-fade-in">
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-indigo-500/20 px-2.5 py-0.5 text-[9px] font-extrabold uppercase tracking-widest text-indigo-300 border border-indigo-500/20">
+                🚨 GRUPOS ATIVOS
+              </span>
+              <h3 className="text-xs font-black text-white uppercase tracking-wider flex items-center gap-1.5">
+                🛒 COMPRA E VENDAS PARNAÍBA PI 🇧🇷
+              </h3>
+              <p className="text-3xs text-slate-300 leading-relaxed font-semibold">
+                Participe dos canais mais movimentados da região e feche negócios rapidamente com total visibilidade!
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 gap-3 pt-1 relative z-10">
+              {/* WhatsApp Compra e Vendas Link */}
               <a
                 href={COMPRA_VENDAS_WA}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-between rounded-xl bg-slate-50 hover:bg-slate-100 p-3 text-xs font-bold text-slate-700 dark:bg-slate-950 dark:text-slate-300 dark:hover:bg-slate-900"
+                className="group flex flex-col items-start justify-between rounded-xl bg-gradient-to-r from-emerald-600 via-teal-600 to-emerald-500 hover:opacity-95 p-4 transition-all duration-300 shadow-lg shadow-emerald-950/40 hover:scale-[1.02] active:scale-[0.98] border border-emerald-400/20"
               >
-                <span>Grupo WhatsApp 📲</span>
-                <Compass className="h-4 w-4 text-emerald-500" />
+                <div className="flex w-full items-center justify-between">
+                  <span className="text-[10px] font-black uppercase tracking-wider text-emerald-50 bg-white/10 px-2 py-0.5 rounded-sm">
+                    GRUPO WHATSAPP 📲
+                  </span>
+                  <span className="flex h-2 w-2 relative">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-300"></span>
+                  </span>
+                </div>
+                <div className="flex w-full items-center justify-between mt-2">
+                  <span className="text-xs sm:text-sm font-black text-white">
+                    🛒 COMPRA E VENDAS 🤝🇧🇷
+                  </span>
+                  <Compass className="h-4 w-4 text-white shrink-0 group-hover:rotate-45 transition-transform" />
+                </div>
+                <span className="text-[9px] font-bold text-emerald-200 mt-1 uppercase">CLIQUE PARA ENTRAR NO GRUPO ➡</span>
               </a>
 
+              {/* Facebook Compra e Vendas Link */}
               <a
                 href={COMPRA_VENDAS_FB}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-between rounded-xl bg-slate-50 hover:bg-slate-100 p-3 text-xs font-bold text-slate-700 dark:bg-slate-950 dark:text-slate-300 dark:hover:bg-slate-900"
+                className="group flex flex-col items-start justify-between rounded-xl bg-gradient-to-r from-blue-700 via-indigo-700 to-blue-600 hover:opacity-95 p-4 transition-all duration-300 shadow-lg shadow-blue-950/40 hover:scale-[1.02] active:scale-[0.98] border border-blue-400/20"
               >
-                <span>Grupo Facebook 📲</span>
-                <Share2 className="h-4 w-4 text-indigo-500" />
+                <div className="flex w-full items-center justify-between">
+                  <span className="text-[10px] font-black uppercase tracking-wider text-blue-50 bg-white/10 px-2 py-0.5 rounded-sm">
+                    GRUPO FACEBOOK 📲
+                  </span>
+                  <span className="flex h-2 w-2 relative">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-300"></span>
+                  </span>
+                </div>
+                <div className="flex w-full items-center justify-between mt-2">
+                  <span className="text-xs sm:text-sm font-black text-white">
+                    🛒 COMPRA E VENDAS 🤝🇧🇷
+                  </span>
+                  <Share2 className="h-4 w-4 text-white shrink-0 group-hover:scale-110 transition-transform" />
+                </div>
+                <span className="text-[9px] font-bold text-blue-200 mt-1 uppercase">CLIQUE PARA PARTICIPAR DO FACEBOOK ➡</span>
               </a>
             </div>
           </div>
